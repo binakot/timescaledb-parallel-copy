@@ -1,0 +1,9 @@
+1,failed,2019-07-29 07:43:14.197455,"---
+:image:
+  :name: ubuntu:16.04
+:before_script:
+- echo ""Install sofrware""
+- apt-get update && apt-get install -y sudo wget
+:script:
+- errcount=0
+"

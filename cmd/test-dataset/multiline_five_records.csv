@@ -1,0 +1,52 @@
+1,failed,2019-07-29 07:43:14.197455,"---
+:image:
+  :name: ubuntu:16.04
+:before_script:
+- echo ""Install sofrware""
+- apt-get update && apt-get install -y sudo wget
+:script:
+- errcount=0
+"
+2,failed,2019-08-29 08:38:31.747244,"---
+:image:
+  :name: ubuntu:16.04
+:before_script:
+- echo ""Install sofrware""
+- apt-get update && apt-get install -y sudo wget
+:script:
+- echo ""Tests""
+- ""./tests.sh""
+"
+3,failed,2019-09-29 08:52:44.77306,"---
+:image:
+  :name: docker:stable
+:services:
+- :name: docker:stable-dind
+:before_script:
+- docker info
+:script:
+- echo ""Tests""
+- ""./tests.sh""
+"
+4,failed,2019-10-29 09:31:14.098283,"---
+:image:
+  :name: ubuntu:16.04
+:services:
+- :name: docker:stable-dind
+:before_script:
+- docker info
+:script:
+- echo ""Tests""
+- ""./tests.sh""
+"
+5,failed,2019-11-29 09:55:21.588764,"---
+:image:
+  :name: docker:stable
+:services:
+- :name: docker:stable-dind
+:before_script:
+- docker info
+:script:
+- echo ""Tests""
+- ""./tests.sh""
+"
