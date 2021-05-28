@@ -56,7 +56,7 @@ type batch struct {
 }
 
 // Parse args
-func init() {
+func parseArgs() {
 	var dbName string
 	flag.StringVar(&postgresConnect, "connection", "host=localhost user=postgres sslmode=disable", "PostgreSQL connection url")
 	flag.StringVar(&dbName, "db-name", "", "Database where the destination table exists")
@@ -93,6 +93,8 @@ func getFullTableName() string {
 }
 
 func main() {
+	parseArgs()
+
 	if showVersion {
 		fmt.Printf("%s %s (%s %s)\n", binName, version, runtime.GOOS, runtime.GOARCH)
 		os.Exit(0)
